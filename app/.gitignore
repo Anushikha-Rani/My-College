@@ -1,1 +1,57 @@
-/build
+# === OS-specific ===
+# macOS
+.DS_Store
+# Windows
+Thumbs.db
+
+# === IDEs (IntelliJ/Android Studio) ===
+*.iml
+.idea/
+!/.idea/codeStyles/
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.idea/httpRequests/
+
+# === Build tools ===
+.gradle/
+build/
+**/build/
+
+# === Local settings ===
+local.properties
+
+# === Java/Kotlin compiled artifacts ===
+*.class
+*.jar
+*.war
+*.ear
+hs_err_pid*
+replay_pid*
+
+# === Logs & packages ===
+*.log
+*.zip
+*.tar.gz
+*.rar
+
+# === Android / JVM-specific ===
+*.apk
+*.ap_
+*.aab
+*.dex
+*.nar
+
+# === JNI / native builds ===
+.externalNativeBuild
+.cxx/
+
+# === Keystore/signing files ===
+*.jks
+*.keystore
+
+# === Other ###
+.vscode/
