@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Suvidha Cart</string>
+    <string name="close">Close</string>
+    <string name="add_img_item_desc">Image Item</string>
+    <string name="pro_item_price">Price: $%d</string>
+    <string name="product_detail_image_desc">Product Image</string>
+    <string name="pro_details_like_btn_desc">Like Button</string>
+    <string name="pro_details_delete_btn_desc">Remove Product Button</string>
+    <string name="plus_btn_desc">Increase Button</string>
+    <string name="minus_btn_desc">Decrease Button</string>
+    <string name="no_items_in_cart_text">No Products Added Yet!</string>
+    <string name="cart_check_out_btn">Check Out</string>
+    <string name="chat_scroll_view">Chat Scroll View</string>
+    <string name="chat_message_area">chat message area</string>
+    <string name="type_your_message">Type your message</string>
+    <string name="send">Send</string>
+    <string name="send_button">send button</string>
+    <string name="type_a_message">Type a message</string>
+    <string name="scroll">scroll</string>
+</resources>

@@ -1,0 +1,46 @@
+<!-- res/layout/activity_chatbot.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#F2F2F2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        >
+
+        <EditText
+            android:id="@+id/inputMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/type_a_message"
+            android:background="@android:color/transparent"
+            android:minHeight="48dp"
+            android:minWidth="48dp"/>
+
+        <ImageButton
+            android:id="@+id/sendButton"
+            android:src="@android:drawable/ic_menu_send"
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/send_button"
+            android:minHeight="48dp"
+            android:minWidth="48dp"/>
+    </LinearLayout>
+</LinearLayout>
+
+

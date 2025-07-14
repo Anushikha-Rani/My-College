@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:contentDescription="@string/scroll">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FAF6F6"
+        tools:context=".view.Profile">
+
+        <!-- Profile Picture -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imagePhoto"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="70dp"
+            android:background="@color/light_gray"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/circular"
+            app:srcCompat="@drawable/baseline_person_24"
+            app:strokeColor="#F2FFFF"
+            app:strokeWidth="8dp" />
+
+        <!-- Camera Button -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/cameraButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="#D3D3D3"
+            android:clickable="true"
+            android:contentDescription="Change Profile Picture"
+            android:focusable="true"
+            android:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/imagePhoto"
+            app:layout_constraintEnd_toEndOf="@id/imagePhoto"
+            app:shapeAppearanceOverlay="@style/circular"
+            app:srcCompat="@drawable/baseline_photo_camera_24" />
+
+        <!-- Name -->
+        <TextView
+            android:id="@+id/NameProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="#0A0A0A"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imagePhoto" />
+
+        <!-- Email -->
+        <TextView
+            android:id="@+id/emailProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_light"
+            android:textColor="#ABAFB3"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/NameProfile" />
+
+        <!-- Phone Number -->
+        <TextView
+            android:id="@+id/phoneProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#ABAFB3"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/emailProfile" />
+
+        <!-- Cart Box -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/aluminibox"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="25dp"
+            android:backgroundTint="#00D9FF"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phoneProfile">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#304092"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/aluminitext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:text="Alumini"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Hostel Box -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/hostelbox"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="25dp"
+            android:backgroundTint="#00A4FD"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/aluminibox">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#304092"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/hosteltext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:text="Hostel"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/canteenbox"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:backgroundTint="#00A4FD"
+                app:cardCornerRadius="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/hostelbox">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#304092"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/canteentext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:text="Canteen"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/librarybox"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="25dp"
+            android:backgroundTint="#00A4FD"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/canteenbox">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#304092"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/librarytext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:text="Library"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/consellingbox"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="25dp"
+            android:backgroundTint="#00A4FD"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/librarybox">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#304092"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/consellingtext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:text="Conselling"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/internshipbox"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:backgroundTint="#00A4FD"
+                app:cardCornerRadius="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/consellingbox">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#304092"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/internshiptext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:text="Internship"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/placementbox"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:backgroundTint="#00A4FD"
+                app:cardCornerRadius="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/internshipbox">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#304092"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/placementtext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:text="Placement"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/aboutusbox"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="25dp"
+                android:backgroundTint="#00A4FD"
+                app:cardCornerRadius="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/placementbox">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#304092"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:id="@+id/aboutustext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:text="About us"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+
+
+            <!-- Edit Profile Box -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/editProfileBox"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="25dp"
+            android:backgroundTint="#FF005EFF"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/aboutusbox">
+
+            <RelativeLayout
+                android:layout_width="378dp"
+                android:layout_height="match_parent"
+                android:background="#304092"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/editProfileText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:text="Edit Profile"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Logout Box -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/logoutBox"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="25dp"
+            android:backgroundTint="#FFE0E0"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/editProfileBox">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FAD3D3"
+                android:padding="20dp">
+
+                <ImageView
+                    android:id="@+id/logoutIcon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/logout_icon" />
+
+                <TextView
+                    android:id="@+id/logoutText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/logoutIcon"
+                    android:text="Logout"
+                    android:textColor="#FF4500"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ScrollView
+            android:layout_width="509dp"
+            android:layout_height="50dp"
+            android:background="#010D43"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

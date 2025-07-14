@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".view.EditProfile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Profile Icon -->
+            <Button
+                android:id="@+id/buttonSave"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="44dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/blue_accent_300"
+                android:text="Save Changes"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInputEditAddress" />
+
+            <ImageView
+                android:id="@+id/imageEdit"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="Profile Icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/ic_launcher" />
+
+            <!-- Edit Profile Header -->
+
+            <!-- Instruction Text -->
+            <TextView
+                android:id="@+id/textEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="EDIT PROFILE"
+                android:textColor="#0a0a0a"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageEdit" />
+
+            <TextView
+                android:id="@+id/textViewReg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="#ABAFB3"
+                android:text="Edit your profile below"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/textEdit"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Name Label -->
+
+            <!-- Name Input -->
+
+            <!-- Gender Label -->
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Name"
+                android:textColor="#ABAFB3"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewReg" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEditName"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/extraroundcorner"
+                android:hint="Enter your name"
+                android:paddingHorizontal="16dp"
+                android:singleLine="true"
+                android:textColor="#000414"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/name" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextDate"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/extraroundcorner"
+                android:ems="10"
+                android:hint="Enter your DOB"
+                android:paddingHorizontal="16dp"
+                android:focusable="false"
+                android:clickable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Date" />
+
+            <TextView
+                android:id="@+id/Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="DOB"
+                android:textColor="#ABAFB3"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/textInputEditName"
+                tools:layout_editor_absoluteX="0dp" />
+
+            <!-- Gender RadioGroup -->
+            <TextView
+                android:id="@+id/gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Gender"
+                android:textColor="#ABAFB3"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTextDate" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupGender"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/gender"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+            <RadioButton
+                android:id="@+id/radioMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textColor="@color/blue_accent_300"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_medium" />
+
+            <RadioButton
+                android:id="@+id/radioFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Female"
+                android:textColor="#FF008C"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_medium" />
+        </RadioGroup>
+
+            <!-- Phone Number Label -->
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Phone Number"
+                android:textColor="#ABAFB3"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins_medium"
+                app:layout_constraintTop_toBottomOf="@id/radioGroupGender"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!-- Phone Number Input -->
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEditPhone"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/extraroundcorner"
+                android:hint="Enter your phone number"
+                android:paddingHorizontal="16dp"
+                android:singleLine="true"
+                android:textColor="#02061F"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/phone" />
+
+            <!-- Address Label -->
+
+            <!-- Address Input -->
+
+
+            <!-- Address Input -->
+
+
+            <!-- Address Input -->
+
+            <!-- Save Button -->
+
+
+            <TextView
+                android:id="@+id/textAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="36dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Address"
+                android:textColor="#ABAFB3"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textInputEditPhone" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEditAddress"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/extraroundcorner"
+                android:hint="Enter your address"
+                android:paddingHorizontal="16dp"
+                android:singleLine="true"
+                android:textColor="#0F0E0E"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textAddress" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="-1dp"
+                tools:layout_editor_absoluteY="9dp" />
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
